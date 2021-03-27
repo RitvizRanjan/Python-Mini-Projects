@@ -1,0 +1,16 @@
+import os 
+import random 
+
+path='enter the path of your folder of videos in your pc"
+
+#os.chdir is used to open the dir of given path 
+os.chdir(path)
+
+#folder_name is the folder which contains all of our videos 
+#random.choicw will choose random videos from the folder
+#os.listdir will list all the items are present your specified path 
+folder_name=random.chioce(os.listdir(path)
+
+print("enjoy")
+#for mac use "open" instead of "start"
+os.system("start"+folder_name)
