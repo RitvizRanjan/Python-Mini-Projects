@@ -1,0 +1,22 @@
+url='specify the url '
+import requests
+import math
+import time 
+from tqdm import tqdm
+
+#at one time i just want to download 256 bytes
+chunk_size=256
+
+#will show the length of content
+s=int(r.headers[context-length'])
+
+r=requests.get(url,stream=True)
+#Stream =True==>will not get data at once will get data one by one
+n=math.ceil(s/chunksize)
+
+
+#file handling  
+with open ("ilename.pdf","wb") as file:
+  for chunk in tqdm(r.iter_content(chunk_size=chunk_size), total=n):
+        time.sleep(0.5)
+        file.write(chunk)
