@@ -21,3 +21,20 @@ with open ("filename.pdf","wb") as file:
   for chunk in tqdm(r.iter_content(chunk_size=chunk_size), total=n):
         time.sleep(0.5)
         file.write(chunk)
+
+
+
+
+
+#r.iter_context ==> one by one in chunks 
+#for animations we use tqdm 
+#for e.g  in for loop  
+       from tqdm import tqdm 
+       import time
+       a=[1,2,35,7,87] 
+        for i in tqdm(a):
+                time.sleep(1)
+                print(i)
+
+
+
