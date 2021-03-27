@@ -16,7 +16,8 @@ n=math.ceil(s/chunksize)
 
 
 #file handling  
-with open ("ilename.pdf","wb") as file:
+#w=write #b=binary #because pdf is binary file
+with open ("filename.pdf","wb") as file:
   for chunk in tqdm(r.iter_content(chunk_size=chunk_size), total=n):
         time.sleep(0.5)
         file.write(chunk)
